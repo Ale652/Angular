@@ -1,0 +1,19 @@
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{city.name}}</mat-card-title>
+      <mat-card-subtitle>{{mainTemp}} {{type}}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="weather-icon">
+      <img mat-card-image src="http://openweathermap.org/img/wn/{{city.weather[0].icon}}.png" alt="Photo of a Shiba Inu">
+    </div>
+    <mat-card-content>
+      <div>Low: {{temp_min}} {{type}}</div>  
+      <div>Hight: {{temp_max}} {{type}}</div>  
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button [routerLink]="['weatherDetails', city.zip]">Details</button>
+      <button mat-button>Remove</button>
+    </mat-card-actions>
+  </mat-card>

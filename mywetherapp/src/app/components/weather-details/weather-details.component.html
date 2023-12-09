@@ -1,0 +1,17 @@
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{cityDetails.name}}</mat-card-title>
+      <mat-card-subtitle>{{cityDetails.main.temp}}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="weather-icon">
+      <img mat-card-image src="http://openweathermap.org/img/wn/{{cityDetails.weather[0].icon}}.png" alt="Photo of a Shiba Inu">
+    </div>
+    <mat-card-content>
+      <div>Low: {{cityDetails.main.temp_min}}</div>  
+      <div>Hight: {{cityDetails.main.temp_max}}</div>  
+    </mat-card-content>
+
+  </mat-card>
+
